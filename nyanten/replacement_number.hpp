@@ -10,12 +10,13 @@
 #include <nyanten/standard/replacement_number.hpp>
 #include <algorithm>
 #include <iterator>
+#include <ranges>
 #include <cstdint>
 
 
 namespace Nyanten{
 
-template<typename ForwardIterator>
+template<std::forward_iterator ForwardIterator>
 std::uint_fast8_t calculateReplacementNumber(ForwardIterator first, ForwardIterator last)
 {
   std::uint_fast8_t const n = [&]() {
@@ -50,7 +51,7 @@ std::uint_fast8_t calculateReplacementNumber(ForwardIterator first, ForwardItera
   return std::min({r0, r1, r2});
 }
 
-template<typename ForwardRange>
+template<std::ranges::forward_range ForwardRange>
 std::uint_fast8_t calculateReplacementNumber(ForwardRange const &r)
 {
   return Nyanten::calculateReplacementNumber(std::cbegin(r), std::cend(r));

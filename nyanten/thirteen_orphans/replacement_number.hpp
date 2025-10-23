@@ -12,7 +12,7 @@
 
 namespace Nyanten::ThirteenOrphans_{
 
-template<typename ForwardIterator>
+template<std::forward_iterator ForwardIterator>
 std::uint_fast8_t calculateReplacementNumber(
   ForwardIterator first, ForwardIterator last, std::uint_fast8_t const n)
 {

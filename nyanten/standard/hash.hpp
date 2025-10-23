@@ -7,13 +7,14 @@
 
 #include <nyanten/standard/zipai_table.hpp>
 #include <nyanten/standard/shupai_table.hpp>
+#include <iterator>
 #include <cstdint>
 #include <cassert>
 
 
 namespace Nyanten::Standard_{
 
-template<typename ForwardIterator>
+template<std::forward_iterator ForwardIterator>
 std::uint_fast32_t hashShupai(ForwardIterator first, ForwardIterator last)
 {
   std::uint_fast32_t h = 0u;
@@ -35,7 +36,7 @@ std::uint_fast32_t hashShupai(ForwardIterator first, ForwardIterator last)
   return h;
 }
 
-template<typename ForwardIterator>
+template<std::forward_iterator ForwardIterator>
 std::uint_fast32_t hashZipai(ForwardIterator first, ForwardIterator last)
 {
   std::uint_fast32_t h = 0u;
