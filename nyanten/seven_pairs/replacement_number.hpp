@@ -11,8 +11,8 @@
 
 namespace Nyanten::SevenPairs_{
 
-template<std::forward_iterator I>
-std::uint_fast8_t calculateReplacementNumber(I first, I last, std::uint_fast8_t const n)
+template<std::forward_iterator I, std::sentinel_for<I> S>
+std::uint_fast8_t calculateReplacementNumber(I first, S last, std::uint_fast8_t const n)
 {
   if (n != 13u && n != 14u) {
     return std::numeric_limits<std::uint_fast8_t>::max();

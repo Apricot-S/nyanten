@@ -25,7 +25,7 @@ int main()
 
 # Interfaces
 
-### `template<std::forward_iterator I>`<br/>`std::uint_fast8_t Nyanten::calculateReplacementNumber(I first, I last)`
+### `template<std::forward_iterator I, std::sentinel_for<I> S>`<br/>`std::uint_fast8_t Nyanten::calculateReplacementNumber(I first, S last)`
 
 #### Preconditions
 

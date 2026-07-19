@@ -16,8 +16,8 @@
 
 namespace Nyanten{
 
-template<std::forward_iterator I>
-std::uint_fast8_t calculateReplacementNumber(I first, I last)
+template<std::forward_iterator I, std::sentinel_for<I> S>
+std::uint_fast8_t calculateReplacementNumber(I first, S last)
 {
   std::uint_fast8_t const n = [&]() {
     std::uint_fast8_t i = 0u;
