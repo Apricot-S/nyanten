@@ -29,7 +29,7 @@ int main()
 
 #### Preconditions
 
-- `std::distance(first, last) == 34`
+- `[first, last)` is a valid range containing exactly 34 elements.
 - For every `iter` in the range `[first, last)`, `0 <= *iter` and `*iter <= 4`
 - The sum of the numbers in the range `[first, last)` is less or equal to 14.
 - The sum of the numbers in the range `[first, last)` is congruent to 1 or 2 modulo 3.
