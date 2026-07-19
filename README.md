@@ -56,4 +56,4 @@ Calculate the replacement number, which is equal to the deficiency number (a.k.a
 
 ### `template<typename R>`<br/>`requires std::ranges::random_access_range<R const>`<br/>`std::uint_fast8_t Nyanten::calculateReplacementNumber(R const &r)`
 
-Call `Nyanten::calculateReplacementNumber(std::cbegin(r), std::cend(r))`.
+Call `Nyanten::calculateReplacementNumber(std::ranges::cbegin(r), std::ranges::cend(r))`.
