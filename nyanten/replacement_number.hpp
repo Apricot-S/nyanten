@@ -16,13 +16,13 @@
 
 namespace Nyanten{
 
-template<std::forward_iterator ForwardIterator>
-std::uint_fast8_t calculateReplacementNumber(ForwardIterator first, ForwardIterator last)
+template<std::forward_iterator I>
+std::uint_fast8_t calculateReplacementNumber(I first, I last)
 {
   std::uint_fast8_t const n = [&]() {
     std::uint_fast8_t i = 0u;
     std::uint_fast8_t n = 0u;
-    for (ForwardIterator iter = first; iter != last; ++iter) {
+    for (I iter = first; iter != last; ++iter) {
       if (*iter < 0) {
         throw std::invalid_argument("All tile counts must be non-negative.");
       }
@@ -51,8 +51,8 @@ std::uint_fast8_t calculateReplacementNumber(ForwardIterator first, ForwardItera
   return std::min({r0, r1, r2});
 }
 
-template<std::ranges::forward_range ForwardRange>
-std::uint_fast8_t calculateReplacementNumber(ForwardRange const &r)
+template<std::ranges::forward_range R>
+std::uint_fast8_t calculateReplacementNumber(R const &r)
 {
   return Nyanten::calculateReplacementNumber(std::cbegin(r), std::cend(r));
 }

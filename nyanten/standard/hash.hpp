@@ -14,8 +14,8 @@
 
 namespace Nyanten::Standard_{
 
-template<std::forward_iterator ForwardIterator>
-std::uint_fast32_t hashShupai(ForwardIterator first, ForwardIterator last)
+template<std::forward_iterator I>
+std::uint_fast32_t hashShupai(I first, I last)
 {
   std::uint_fast32_t h = 0u;
   {
@@ -36,8 +36,8 @@ std::uint_fast32_t hashShupai(ForwardIterator first, ForwardIterator last)
   return h;
 }
 
-template<std::forward_iterator ForwardIterator>
-std::uint_fast32_t hashZipai(ForwardIterator first, ForwardIterator last)
+template<std::forward_iterator I>
+std::uint_fast32_t hashZipai(I first, I last)
 {
   std::uint_fast32_t h = 0u;
   {

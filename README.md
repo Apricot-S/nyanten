@@ -25,7 +25,7 @@ int main()
 
 # Interfaces
 
-### `template<std::forward_iterator ForwardIterator>`<br/>`std::uint_fast8_t Nyanten::calculateReplacementNumber(ForwardIterator first, ForwardIterator last)`
+### `template<std::forward_iterator I>`<br/>`std::uint_fast8_t Nyanten::calculateReplacementNumber(I first, I last)`
 
 #### Preconditions
 
@@ -54,6 +54,6 @@ Calculate the replacement number, which is equal to the deficiency number (a.k.a
 |-------|-------|-------|-------|-------|-----------|-----------|---------|
 | Tile  | 🀀 (E) | 🀁 (S) | 🀂 (W) | 🀃 (N) | 🀆 (White) | 🀅 (Green) | 🀄 (Red) |
 
-### `template<std::ranges::forward_range ForwardRange>`<br/>`std::uint_fast8_t Nyanten::calculateReplacementNumber(ForwardRange const &r)`
+### `template<std::ranges::forward_range R>`<br/>`std::uint_fast8_t Nyanten::calculateReplacementNumber(R const &r)`
 
 Call `Nyanten::calculateReplacementNumber(std::cbegin(r), std::cend(r))`.
