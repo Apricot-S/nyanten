@@ -8,8 +8,6 @@
 #include <nyanten/standard/keys.hpp>
 #include <nyanten/standard/hash.hpp>
 #include <nyanten/standard/core.hpp>
-#include <algorithm>
-#include <array>
 #include <iterator>
 #include <cstdint>
 
