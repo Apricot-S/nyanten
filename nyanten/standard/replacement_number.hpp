@@ -22,7 +22,7 @@ using Nyanten::Standard_::Key2;
 using Nyanten::Standard_::shupai_keys;
 using Nyanten::Standard_::zipai_keys;
 
-template<std::forward_iterator I>
+template<std::random_access_iterator I>
 std::uint_fast8_t calculateReplacementNumber(I first, std::uint_fast8_t const n)
 {
   std::uint_fast8_t const m = n / 3u;

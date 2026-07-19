@@ -16,7 +16,7 @@
 
 namespace Nyanten{
 
-template<std::forward_iterator I, std::sentinel_for<I> S>
+template<std::random_access_iterator I, std::sentinel_for<I> S>
 std::uint_fast8_t calculateReplacementNumber(I first, S last)
 {
   std::uint_fast8_t const n = [&]() {
@@ -51,7 +51,7 @@ std::uint_fast8_t calculateReplacementNumber(I first, S last)
   return std::min({r0, r1, r2});
 }
 
-template<std::ranges::forward_range R>
+template<std::ranges::random_access_range R>
 std::uint_fast8_t calculateReplacementNumber(R const &r)
 {
   return Nyanten::calculateReplacementNumber(std::cbegin(r), std::cend(r));
