@@ -52,7 +52,8 @@ std::uint_fast8_t calculateReplacementNumber(I first, S last)
   return std::min({r0, r1, r2});
 }
 
-template<std::ranges::random_access_range R>
+template<typename R>
+  requires std::ranges::random_access_range<R const>
 std::uint_fast8_t calculateReplacementNumber(R const &r)
 {
   return Nyanten::calculateReplacementNumber(std::cbegin(r), std::cend(r));

@@ -54,6 +54,6 @@ Calculate the replacement number, which is equal to the deficiency number (a.k.a
 |-------|-------|-------|-------|-------|-----------|-----------|---------|
 | Tile  | 🀀 (E) | 🀁 (S) | 🀂 (W) | 🀃 (N) | 🀆 (White) | 🀅 (Green) | 🀄 (Red) |
 
-### `template<std::ranges::random_access_range R>`<br/>`std::uint_fast8_t Nyanten::calculateReplacementNumber(R const &r)`
+### `template<typename R>`<br/>`requires std::ranges::random_access_range<R const>`<br/>`std::uint_fast8_t Nyanten::calculateReplacementNumber(R const &r)`
 
 Call `Nyanten::calculateReplacementNumber(std::cbegin(r), std::cend(r))`.
