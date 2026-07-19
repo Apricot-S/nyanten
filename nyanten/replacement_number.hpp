@@ -56,7 +56,7 @@ template<typename R>
   requires std::ranges::random_access_range<R const>
 std::uint_fast8_t calculateReplacementNumber(R const &r)
 {
-  return Nyanten::calculateReplacementNumber(std::cbegin(r), std::cend(r));
+  return Nyanten::calculateReplacementNumber(std::ranges::cbegin(r), std::ranges::cend(r));
 }
 
 } // namespace Nyanten
